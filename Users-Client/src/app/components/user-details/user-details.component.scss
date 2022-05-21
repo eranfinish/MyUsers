@@ -1,0 +1,120 @@
+@media screen and
+(min-device-width: 960px) and (max-device-width: 1920px) {
+  img{
+    width:5vw;
+  }
+    .lbl{
+      font-weight:bold;
+      font-size: 1vw;
+    }
+    .lbl-dtl{
+      background-color: #f7f4f4;
+      padding: 0.5vh 1.5vw;
+      width: 30vw;
+    }
+    .name{
+      display: inline-block;
+      margin-right:2vw;
+    }
+}
+@media screen and (orientation:landscape) and
+(min-device-height: 320px) and (max-device-height: 450px) {
+  h1{
+    text-align: center;
+  }
+  .img-contnr{
+    display: inline-block;
+    align-self: flex-start;
+    position: absolute;
+    top: 13vh;
+    left: 2vw;
+  }
+  .wrapper{
+    align-self: flex-start;
+  }
+  .image-upload{
+    align-self: flex-start;
+  }
+  .details{
+    display:inline-block;
+  }
+  img{
+    width: 15vw;
+    align-self: flex-start;
+    border: 1px solid gray;
+   
+  }
+  .container{
+    margin-left:4vw ;
+    
+      display:flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+  align-items: center;
+  
+    
+  }
+  .name-container{
+    display:inline-block;
+    margin-right: 2vw ;
+  }
+  .email{
+    display:inline-block;
+  }
+  .address{
+    display:inline-block;
+  }
+  .lbl-dtl{
+    background-color: #f7f4f4;
+    padding: 0.5vh 1.5vw;
+    width: -webkit-fill-available;
+  }
+  .wrapper{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+align-self: start;
+align-items: flex-start;
+
+  }
+.buttons{
+  margin-top:2vh;
+  margin-left:5vw;
+  text-align: left;
+}
+button{
+  margin-right:2vw;
+  background-color:#1cfff4;
+}
+}
+@media screen and (orientation:portrait) and
+(min-device-width: 320px) and (max-device-width: 450px) {
+h1{
+  text-align: center;
+}
+img{
+  width: 25vw;
+  border: 1px solid gray;
+}
+.container{
+  margin-left:4vw ;
+}
+.lbl-dtl{
+  background-color: #f7f4f4;
+  padding: 0.5vh 1.5vw;
+  width: -webkit-fill-available;
+}
+.buttons{
+  margin-top:2vh;
+  margin-left:5vw;
+  text-align: left;
+}
+button{
+  margin-right:5vw;
+  background-color:#1cfff4;
+}
+}

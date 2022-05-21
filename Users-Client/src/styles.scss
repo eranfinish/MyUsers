@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+@media screen and
+(min-device-width: 960px) and (max-device-width: 1920px) {
+  body{
+    font-size: 1.5vw;
+    font-family: arial,sans;
+  }
+}
+@media screen and (orientation:landscape) and
+(min-device-width: 320px) and (max-device-width: 450px) {
+  body{
+    font-size: 6vw;
+  }
+}
+@media screen and (orientation:portrait) and
+(min-device-width: 320px) and (max-device-width: 450px) {
+  body{
+    font-size: 6vw;
+  }
+}

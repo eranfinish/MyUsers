@@ -1,0 +1,16 @@
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\TestApi.exe
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\DAL\MOCK_DATA.json
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\libman.json
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\TestApi.dll
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\TestApi.deps.json
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\TestApi.runtimeconfig.json
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\TestApi.pdb
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\EasyCaching.Core.dll
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\LazyCache.dll
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

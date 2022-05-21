@@ -1,0 +1,24 @@
+
+  <div class="content" role="main">
+    <div>
+      <ul class="nav nav-tabs">
+        <li role="presentation"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+          <a routerLink="/" >Users</a>
+        </li>
+        <li role="presentation" routerLinkActive="active">
+          <a routerLink="user-details">User Details</a>
+        </li>
+      </ul>
+    </div>
+    <!--   <div class="containe-imgs">
+        <div class="user-img" *ngFor="let user of users" >
+          <app-user [user]="user"></app-user>
+        </div>
+      </div> -->
+<div class="row">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>

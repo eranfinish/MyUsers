@@ -1,0 +1,28 @@
+
+  @media screen and
+(min-device-width: 960px) and (max-device-width: 1920px) {
+ 
+    .content{
+        margin:5vh 20vw;
+    }
+  .user-img{
+      display:inline-block;
+      margin:1vh 1vw;
+  }
+
+
+}
+
+
+@media screen and (orientation:landscape) and
+(min-device-height: 320px) and (max-device-height: 450px) {
+  .content{
+    margin:0;
+}
+}
+@media screen and (orientation:portrait) and
+(min-device-width: 320px) and (max-device-width: 450px) {
+  .content{
+    margin:0;
+}
+}

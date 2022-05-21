@@ -1,0 +1,25 @@
+
+  <h1>Users List</h1>
+  <div class="users">
+  <div class="contain-imgs">
+    <div class="user-img" *ngFor="let user of users" >
+      <app-user [user]="user"></app-user>
+    </div>
+  </div>
+  <div class="pages">
+  <label class="arrow left" (click)="nextPrevPage('<<')"><<</label>
+    <label class="page" 
+    *ngFor="let page of counter(pages);
+    index as i" 
+    [class.active]="selectedIndex === i"   [style.display]="filterPage(i)">
+    <label
+    (click)="getPage(i)" >{{i+1}}</label>
+
+  </label>
+  <label class="arrow right" (click)="nextPrevPage('>>')">>></label>
+  </div>
+  <div class="add-user" (click)="newUser()">
+  <label class="plus">+</label><label>Add User</label>
+
+  </div>
+</div>

@@ -1,0 +1,91 @@
+<h1>User Details</h1>
+<div class="container">
+<div class="img-contnr">
+  <div class="wrapper">
+  <div class="image-upload"  *ngIf="user.edit">
+    <img [src]="imageSrc" style="    max-width: 10vw;max-height: 10vw;"/>
+    <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChange($event)" />
+</div>
+      <div  *ngIf="showImg()">
+        <img  src="{{user.pic}}"/>
+    </div>
+  </div>
+  </div>
+    <div class="details">
+      <div class="name-container">
+      <div class="name">
+      <label class="lbl">First Name</label>
+      <br/>
+      <input type="text" name="first" value="{{userSave.first_name}}" *ngIf="user.edit"
+            (input)="update('first',$event.target.value)" />
+      <label class="lbl-dtl"  *ngIf="!user.edit" >
+        {{user.first_name}}
+      </label>
+      </div>
+
+
+    <div class="name">
+      <label class="lbl">Last Name</label>
+      <br/>
+        <input type="text" name="last"   *ngIf="user.edit"
+        value="{{userSave.last_name}}"
+        (input)="update('last',$event.target.value)"
+      >
+
+        <label  class="lbl-dtl"  *ngIf="!user.edit" >
+          {{user.last_name}}
+        </label>
+      </div> 
+       <div >
+        <label class="lbl ">Email Address</label>
+        <br/>
+          <input type="email" name="email" pattern="([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+          value="{{userSave.email}}"
+          (input)="update('email',$event.target.value)"
+          *ngIf="user.edit" />
+          <label  class="lbl-dtl"  *ngIf="!user.edit">
+            {{user.email}}
+          </label>
+      </div>
+  </div>     
+
+    <div class="address">
+    <div class="city">
+        <label class="lbl">City</label>
+        <br/>
+        <input type="text" name="city"  value="{{userSave.city}}"
+           (input)="update('city',$event.target.value)"
+        *ngIf="user.edit" />
+        <label  class="lbl-dtl"  *ngIf="!user.edit" >{{user.city}}</label>
+    </div>
+    <div class="street">
+        <label  class="lbl">Street</label>
+        <br/>
+        <input type="text" name="street"   value="{{userSave.strt_addrss}}"
+        (input)="update('street',$event.target.value)"
+         *ngIf="user.edit" />
+        <label  class="lbl-dtl"  *ngIf="!user.edit" >{{user.strt_addrss}}</label>
+    </div>
+    <div>
+      <label class="lbl">Phone</label>
+      <br/>
+      <input type="telephone" name="phone" value="{{userSave.phone}}"
+      (input)="update('phone',$event.target.value)"
+
+      *ngIf="user.edit" />
+      <label  class="lbl-dtl"  *ngIf="!user.edit" >{{user.phone}}</label>
+    </div>
+    </div>
+
+    </div>
+
+</div>
+
+<div class="buttons">
+  <button (click)="editUser()" *ngIf="!user.edit" >Edit User</button>
+  <button (click)="deleteUser(user.id)" *ngIf="!user.edit" >Delete User</button>
+  <button (click)="saveUser()" *ngIf="user.edit" >Save User</button>
+  </div>
+  <div *ngIf="showComment">
+    <label>{{comment}}</label>
+  </div>

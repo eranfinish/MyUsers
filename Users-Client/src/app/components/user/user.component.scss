@@ -1,0 +1,47 @@
+@media screen and (orientation:landscape) and
+(min-device-width: 320px) and (max-device-width: 450px) {
+
+}
+ .user-content{
+        width:10vw;
+        text-align:center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+  }
+
+.user-content img{
+       width:5vw;
+       .username{
+        font-size: 3vw;
+       }
+ }
+ 
+
+
+ @media screen and (orientation:landscape) and
+ (min-device-height: 320px) and (max-device-height: 450px) {
+  .user-content{
+    width:30vw;
+    margin: 2vh 0;
+ }
+.user-content img{
+   width:19vw;
+
+}
+
+
+ }
+ @media screen and (orientation:portrait) and
+ (min-device-width: 320px) and (max-device-width: 450px) {
+   .user-content{
+      width:60vw;
+      margin: 2vh 0;
+   }
+  .user-content img{
+     width:30vw;
+
+}
+ .username{
+   font-size: 3vw;
+ }
+ }

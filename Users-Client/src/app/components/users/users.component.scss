@@ -1,0 +1,198 @@
+@media screen and
+(min-device-width: 960px) and (max-device-width: 1920px) {
+        .pages{
+          text-align: center;
+
+        }
+
+          .content{
+              margin:5vh 20vw;
+          }
+        .user-img{
+            display:inline-block;
+            margin:1vh 1vw;
+        }
+        .page{
+          margin-right: 1vw;
+          color:cornflowerblue;
+          cursor:pointer;
+        }
+        .active{
+          color:rgb(51, 117, 240);
+          font-weight: bold;
+          font-size:1.8vw;
+        }
+        .page:hover{
+          color:rgb(51, 117, 240);
+          font-weight: bold;
+          font-size:1.8vw;
+        }
+      .arrow{
+        padding:0 5vw;
+        margin-right: 1vw;
+        color:cornflowerblue;
+        cursor:pointer;
+
+      }
+      .arrow:hover{
+        color:rgb(51, 117, 240);
+        font-weight: bold;
+        font-size:1.8vw;
+      }
+      .add-user{      
+            border: 1px solid rgb(0, 4, 243);
+            border-radius: 5px;
+            padding: 0;
+            width: 8vw;
+            font-size: 1vw;
+            text-align: center;
+            vertical-align: middle;
+            color:rgb(51, 117, 240);
+        }
+        .plus{
+          font-size:3vw;
+          font-weight: bold;
+          vertical-align: middle;  
+          color:rgb(51, 117, 240);
+         
+        }
+}
+
+
+
+@media screen and (orientation:landscape) and
+(min-device-height: 320px) and (max-device-height: 450px) {
+  h1{
+    text-align: center;
+  }
+.users{
+ text-align: center;
+}
+.contain-imgs{
+  width: 89vw;
+  height: 51vh;
+  overflow-y: hidden;
+  overflow-x: auto;
+  margin-left: 5vw;
+ 
+}
+.user-img{
+  display: table-cell;
+  padding:1vh 1vw;
+}
+.page{
+  margin-right: 1vw;
+  color:cornflowerblue;
+  cursor:pointer;
+}
+.active{
+  color:rgb(51, 117, 240);
+  font-weight: bold;
+  font-size:1.8vw;
+}
+.page:hover{
+  color:rgb(51, 117, 240);
+  font-weight: bold;
+  font-size:1.8vw;
+}
+.arrow{
+padding:0 5vw;
+margin-right: 1vw;
+color:cornflowerblue;
+cursor:pointer;
+
+}
+.arrow:hover{
+color:rgb(51, 117, 240);
+font-weight: bold;
+font-size:1.8vw;
+}
+
+.add-user{      
+  border: 1px solid #0004f3;
+  border-radius: 5px;
+  /* padding: 0; */
+  width: 15vw;
+  font-size: 2vw;
+  text-align: center;
+  vertical-align: middle;
+  color: #3375f0;
+  position: absolute;
+  left: 1vw;
+  top: 76vh;
+  background: #ffffff7a;
+}
+.plus{
+  font-size: 3vw;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #3375f0;
+}
+
+}
+
+@media screen and (orientation:portrait) and
+(min-device-width: 320px) and (max-device-width: 450px) {
+  h1{
+    text-align: center;
+  }
+.users{
+ text-align: center;
+}
+.contain-imgs{
+  height: 70vh;
+  overflow-y: auto;
+  padding: 0 24vw;
+ 
+}
+
+.page{
+  margin-right: 1vw;
+  color:cornflowerblue;
+  cursor:pointer;
+}
+.active{
+  color:rgb(51, 117, 240);
+  font-weight: bold;
+  font-size:1.8vw;
+}
+.page:hover{
+  color:rgb(51, 117, 240);
+  font-weight: bold;
+  font-size:1.8vw;
+}
+.arrow{
+padding:0 5vw;
+margin-right: 1vw;
+color:cornflowerblue;
+cursor:pointer;
+
+}
+.arrow:hover{
+color:rgb(51, 117, 240);
+font-weight: bold;
+font-size:1.8vw;
+}
+
+.add-user{      
+  border: 1px solid #0004f3;
+  border-radius: 5px;
+  /* padding: 0; */
+  width: 28vw;
+  font-size: 4vw;
+  text-align: center;
+  vertical-align: middle;
+  color: #3375f0;
+  position: absolute;
+  left: 1vw;
+  top: 74vh;
+  background: #ffffff7a;
+}
+.plus{
+  font-size:9vw;
+  font-weight: bold;
+  vertical-align: middle;  
+  color:rgb(51, 117, 240);
+ 
+}
+}
