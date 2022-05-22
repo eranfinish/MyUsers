@@ -10,11 +10,14 @@ export class TestService {
   }
 
   getUrl():string{
-    if(window.location.host.indexOf("localhost")> -1){
-      return environment.apiUrl;
+    if(window.location.host == "localhost"){
+      return environment.apiUrl1;
     }
-    return  environment.apiUrl2;
-  }
+   else if(window.location.host.indexOf("localhost:44359") > -1){
+     return environment.apiUrl;
+   }
+   return  environment.apiUrl2;
+ }
  getUsers(x: number, y: number): Observable<UsersList> {
 
   const headers= new HttpHeaders()
