@@ -1,7 +1,7 @@
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\TestApi.exe
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\DATA\MOCK_DATA.json
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
-C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\DAL\MOCK_DATA.json
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\libman.json
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\TestApi.dll
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\PubTmp\Out\TestApi.deps.json

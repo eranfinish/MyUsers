@@ -12,7 +12,7 @@ export class UserService {
   private handleError: HandleError;
   UserInfo:User;
   getUrl():string{
-   if(window.location.host == "localhost"){
+   if(window.location.host.indexOf("localhost") > -1){
      return environment.apiUrl;
    }
    return  environment.apiUrl2;

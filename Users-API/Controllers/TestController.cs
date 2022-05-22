@@ -13,6 +13,8 @@ using TestApi.DAL;
 using TestApi.Models;
 
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.AspNetCore.Hosting;
+using System.Net.Http;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -23,13 +25,41 @@ namespace TestApi.Controllers
     [ApiController]
     public class TestController : ControllerBase
     {
-       // private readonly IMemoryCache _cache =new MemoryCache();
+        private readonly IWebHostEnvironment Environment;
+        public TestController(
+           // IHttpClientFactory clientFactory,
+            IWebHostEnvironment environment)
+        {
+            //       _logger = logger;
+            Environment = environment;
+            Path = Environment.ContentRootPath;
+        }
+
+        // private readonly IMemoryCache _cache =new MemoryCache();
         public static List<User> Users { get; set; }
+        public static string Path
+        {
+            get;
+            set;
+        }
         //public TestController(IMemoryCache cache)
         //{
         //    _cache = cache;            //   var user = DB_Access.Instance;
 
         //}
+
+
+        // GET: api/<TestController>/5/6
+      //  [HttpGet("GetPath")]
+
+        //public string GetPath()
+        //{
+        //    var path = Path.Combine(Environment.ContentRootPath, @"wwwroot\DATA\MOCK_DATA.json");
+        //    return path;
+
+        //}
+
+
         // GET: api/<TestController>/5/6
         [HttpGet("Get/{x}/{y}")]
 
@@ -66,7 +96,8 @@ namespace TestApi.Controllers
                 }
 
                 var users = new List<User>();
-                users = DB_Access.SetUsersList().Result;
+               // Path = Environment.ContentRootPath;
+                users = DB_Access.GetUsersList(Path).Result;
 
                 CacheModel.Add("AllUsers", users);
                 // Set cache options
@@ -96,36 +127,36 @@ namespace TestApi.Controllers
                 };
             }
         }
-    
-        //// GET api/<TestController>/5
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+
+        // GET api/<TestController>/5
+        [HttpGet("{id}")]
+        public string Get(int id)
+        {
+            return "value";
+        }
 
         // POST api/<TestController>
         [HttpPost("Add")]
-        public string Post([FromBody]User user)
+        public IActionResult Post([FromBody]User user)
         {
             try
             {
                 var users = new List<User>();
-                users = DB_Access.SetUsersList().Result;
+                users = DB_Access.GetUsersList(Path).Result;
 
-                var maxId = Users.OrderBy(x => x.id).ToList().Last().id + 1;
+                var maxId = users.OrderBy(x => x.id).ToList().Last().id + 1;
               //  var user = new User();
 
              //   user = JsonConvert.DeserializeObject<User>(user);
                 user.id = maxId;
                 users.Add(user);
-                DB_Access.WriteUsersList(System.Text.Json.JsonSerializer.Serialize(users));
+                _ = DB_Access.WriteUsersList(Path, System.Text.Json.JsonSerializer.Serialize(users));
             }
             catch (Exception ex)
             {
-                return  ex.Message;
+                return StatusCode(500, ex.Message);
             }
-            return "Success";
+            return Ok("Success");
         }
 
         // PUT api/<TestController>/5
@@ -136,12 +167,12 @@ namespace TestApi.Controllers
             {
 
                 var users = new List<User>();
-                users = DB_Access.SetUsersList().Result;
+                users = DB_Access.GetUsersList(Path).Result;
                 int index = users.FindIndex(x => x.id == user.id);
                 users[index] = user;
                 CacheModel.Delete("AllUsers");
                 CacheModel.Add("AllUsers", Users);
-                DB_Access.WriteUsersList(System.Text.Json.JsonSerializer.Serialize(users));
+                _ = DB_Access.WriteUsersList(Path, System.Text.Json.JsonSerializer.Serialize(users));
             }
             catch (Exception ex)
             {
@@ -166,7 +197,7 @@ namespace TestApi.Controllers
                 index = users.FindIndex(x => x.id == id);
                 if (index == -1)
                 {
-                    DB_Access.WriteUsersList(System.Text.Json.JsonSerializer.Serialize(users));
+                    _ = DB_Access.WriteUsersList(Path, System.Text.Json.JsonSerializer.Serialize(users));
                     res = true;
 
                 }

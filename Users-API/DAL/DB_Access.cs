@@ -27,7 +27,7 @@ namespace TestApi.DAL
         private static readonly object lck = new object ();  
   //  private static DB_Access _instance = null;
       
-        public static async Task<List<User>> SetUsersList()
+        public static async Task<List<User>> GetUsersList(string path)
         {
             var allUsers = new List<User>();
             allUsers = CacheModel.Get("AllUsers");
@@ -35,16 +35,16 @@ namespace TestApi.DAL
             {
                 return allUsers;
             }
-
-            return  await JsonFileReader.ReadAsync<List<User>>(@"DAL\MOCK_DATA.json"); 
+             path = Path.Combine(path, @"wwwroot\DATA\MOCK_DATA.json");
+            return  await JsonFileReader.ReadAsync<List<User>>(path); 
         }
 
 
 
-        public static void WriteUsersList(string text)
+        public static async Task<string> WriteUsersList(string path, string text)
         {
-
-          JsonFileWriter.WriteJson(@"DAL\MOCK_DATA.json", text);
+            path = Path.Combine(path, @"wwwroot\DATA\MOCK_DATA.json");
+            return await JsonFileWriter.WriteJson(path, text);
         }
 
     }
@@ -59,9 +59,17 @@ namespace TestApi.DAL
     }
 
     public static class JsonFileWriter    {
-        public static  void WriteJson(string filePath, string text)
+        public static async Task<string>  WriteJson(string filePath, string text)
         {
-            System.IO.File.WriteAllText(filePath, text);
+            try
+            {
+                await System.IO.File.WriteAllTextAsync(filePath, text);
+                return "Success";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
             //return await System.Text.Json.JsonSerializer.DeserializeAsync<T>(stream);
         }
     }

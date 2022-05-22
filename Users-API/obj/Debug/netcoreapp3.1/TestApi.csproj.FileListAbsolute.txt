@@ -6,7 +6,6 @@ C:\Users\finis\source\repos\TestApi\TestApi\obj\Debug\netcoreapp3.1\TestApi.cspr
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Debug\netcoreapp3.1\TestApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\finis\source\repos\TestApi\TestApi\bin\Debug\netcoreapp3.1\DAL\MOCK_DATA.json
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Debug\netcoreapp3.1\TestApi.exe
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Debug\netcoreapp3.1\TestApi.deps.json
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Debug\netcoreapp3.1\TestApi.runtimeconfig.json

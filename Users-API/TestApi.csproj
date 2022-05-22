@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="DAL\MOCK_DATA.json.old" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EasyCaching.Core" Version="1.6.0" />
     <PackageReference Include="LazyCache" Version="2.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />

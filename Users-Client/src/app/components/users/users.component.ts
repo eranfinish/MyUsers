@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { IUser, User } from '../../models/user';
 import {TestService} from '../../services/test.service';
 import {UserService} from '../../services/user.service';
-import {Router} from '@angular/router'
+import { NavigationService} from '../../services/navigation.service';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-  users : IUser[] = new Array<User>();
-  user : IUser = new User();
+  users : User[] = new Array<User>();
+  user : User = new User();
   pages:number ;
   active:number = 1;
   pageArr: Array<number>;
@@ -19,7 +19,7 @@ export class UsersComponent implements OnInit {
   setIndex(index: number) {
      this.selectedIndex = index;
   }
-  constructor(private router:Router, private testService: TestService, 
+  constructor(private navigation:NavigationService, private testService: TestService, 
     private userService:UserService) { }
   counter(i: number) {
     return new Array(i);
@@ -65,12 +65,16 @@ export class UsersComponent implements OnInit {
       this.selectedIndex = this.selectedIndex);
       this.getPage(this.selectedIndex);
   }
+  userDetails(): void {
+    this.navigation.userDetails()
+  }
   newUser(){
     this.user = new User();
     this.user.edit = true;
-  this.userService.setUserInfo(this.user);
-  this.router.navigate(['user-details']);
+    this.userService.setUserInfo(this.user);
+    this.userDetails();
+  //this.router.navigate(['user-details']);
     }
-  
+
 
 }

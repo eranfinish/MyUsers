@@ -1,6 +1,5 @@
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Release\netcoreapp3.1\appsettings.Development.json
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Release\netcoreapp3.1\appsettings.json
-C:\Users\finis\source\repos\TestApi\TestApi\bin\Release\netcoreapp3.1\DAL\MOCK_DATA.json
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Release\netcoreapp3.1\libman.json
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Release\netcoreapp3.1\TestApi.exe
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Release\netcoreapp3.1\TestApi.deps.json
@@ -15,7 +14,6 @@ C:\Users\finis\source\repos\TestApi\TestApi\bin\Release\netcoreapp3.1\Newtonsoft
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\finis\source\repos\TestApi\TestApi\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\TestApi.csproj.AssemblyReference.cache
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\TestApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\TestApi.AssemblyInfoInputs.cache
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\TestApi.AssemblyInfo.cs

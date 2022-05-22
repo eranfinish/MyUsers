@@ -2,7 +2,8 @@
     import {UserService} from '../../services/user.service';
     import { IUser, User } from '../../models/user'
     import { HttpClient, HttpHeaders  } from '@angular/common/http';
-    import {Router} from '@angular/router'
+    import { NavigationService} from '../../services/navigation.service';
+
     import { Observable } from 'rxjs';
 
     @Component({
@@ -20,12 +21,12 @@
       comment:string =  "";
       newUser:boolean = false;
       constructor(private userService:UserService,
-         private http:HttpClient, private router:Router) {};
+         private http:HttpClient, private navigation:NavigationService) {}
 
       ngOnInit() {
         this.user = this.userService.getUserInfo();
 
-        if (this.user == undefined) {
+        if (this.user == undefined || this.user.edit == true) {
           this.newUser = true;
           this.userSave = new User();
          this.user = new User();
@@ -34,12 +35,20 @@
         }
         console.log(this.user);
       }
+     
+    addUser(){//Add New User
+      if(this.userSave.pic == ""){
+        this.userSave.pic = "https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/male/1.png";
+      }
+      this.user = this.userSave;
+      this.userService.addUser(this.userSave).subscribe(res=>{
+          console.log('addUser:',res);
 
-    addUser(){
-     this.userService.addUser(this.userSave).subscribe(res=>{
-          console.log('addUser',res);
-    //return JSON.stringify(promise);
-    this.router.navigate(['']);
+    if(res == "Success"){
+    setTimeout(function(){
+      this.navigation.back();
+      },1000);
+    }
      })
 
 
@@ -51,23 +60,28 @@
       this.showComment = true;
   if(res == "Deleted"){
     setTimeout(function(){
-    this.router.navigate(['']);
+      this.navigation.back();
     },1000);
   }
     //  return JSON.stringify(promise);
       })
 
     }
+    //Update an Existing User Data
     updateUser(){
       console.log(this.userSave);
       this.userService.updateUser(this.userSave).subscribe(res=>{
         console.log('updateUser',res);
         this.user.edit = false;
-
-      })
-
-
+        if(res == "Success!"){
+          setTimeout(function(){
+            this.navigation.back();
+            },1000);
+          }
+      });
     }
+
+
 
  update(name:string, val:any){
       switch(name){
@@ -110,7 +124,7 @@
             this.updateUser();
 
             }
-    this.user.edit = false;
+            this.user.edit = false;
           }
 
     //Upload image and
