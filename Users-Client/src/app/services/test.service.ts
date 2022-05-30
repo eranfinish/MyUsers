@@ -10,13 +10,19 @@ export class TestService {
   }
 
   getUrl():string{
-    if(window.location.host == "localhost"){
-      return environment.apiUrl1;
+    console.log( window.location.origin );
+  //   if(window.location.host == "localhost"){
+  //     return environment.apiUrl1;
+  //   }
+  //  else
+   if(window.location.host.indexOf("localhost:4200") > -1){
+      return environment.apiUrl;
     }
-   else if(window.location.host.indexOf("localhost:44359") > -1){
-     return environment.apiUrl;
-   }
-   return  environment.apiUrl2;
+  //  else{
+  //   return  environment.apiUrl3 +"/UserList/api/Test"
+  //  }
+
+   return  window.location.origin + '/UsersList-api/api/Test';
  }
  getUsers(x: number, y: number): Observable<UsersList> {
 

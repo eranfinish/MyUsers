@@ -12,14 +12,19 @@ export class UserService {
   private handleError: HandleError;
   UserInfo:User;
   getUrl():string{
-    if(window.location.host == "localhost"){
-      return environment.apiUrl1;
-    }
-   else if(window.location.host.indexOf("localhost:44359") > -1){
-     return environment.apiUrl;
+    //   if(window.location.host == "localhost"){
+    //     return environment.apiUrl1;
+    //   }
+    //  else
+     if(window.location.host.indexOf("localhost:4200") > -1){
+        return environment.apiUrl;
+      }
+    //  else{
+    //   return  environment.apiUrl3 +"/UserList/api/Test"
+    //  }
+
+     return "http://" + window.location.origin + '/UsersList-api/api/Test';
    }
-   return  environment.apiUrl2;
- }
 url:string =  this.getUrl();
 constructor(private http:HttpClient) {
 
