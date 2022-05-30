@@ -26,3 +26,4 @@ C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\TestApi.cs
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\TestApi.dll
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\TestApi.pdb
 C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\TestApi.genruntimeconfig.cache
+C:\Users\finis\source\repos\TestApi\TestApi\obj\Release\netcoreapp3.1\TestApi.csproj.AssemblyReference.cache

@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <History>True|2022-05-22T20:07:56.4170556Z;True|2022-05-22T23:07:30.0026966+03:00;True|2022-05-20T14:20:23.8551750+03:00;False|2022-05-20T14:19:05.3137911+03:00;True|2022-05-20T14:02:02.2978826+03:00;True|2022-05-20T13:06:29.3717335+03:00;</History>
+    <History>True|2022-05-29T19:50:27.2661026Z;True|2022-05-22T23:07:56.4170556+03:00;True|2022-05-22T23:07:30.0026966+03:00;True|2022-05-20T14:20:23.8551750+03:00;False|2022-05-20T14:19:05.3137911+03:00;True|2022-05-20T14:02:02.2978826+03:00;True|2022-05-20T13:06:29.3717335+03:00;</History>
     <_PublishTargetUrl>D:\inetpub\wwwroot\UsersList-API</_PublishTargetUrl>
   </PropertyGroup>
 </Project>
